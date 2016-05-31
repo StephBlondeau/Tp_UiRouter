@@ -22,7 +22,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("baby/Stéphanie").get().then(function(message) {
-          $("#resp").append(message);
+          $("#resp").empty().append(message);
         });
       }
     }
@@ -33,7 +33,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("fascinating/Stéphanie").get().then(function(message) {
-          $("#resp").append(message);
+          $("#resp").empty().append(message);
         });
       }
     }
@@ -44,7 +44,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("that/Stéphanie").get().then(function(message) {
-          $("#resp").append(message);
+          $("#resp").empty().append(message);
         });
       }
     }
@@ -55,7 +55,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("what/Stéphanie").get().then(function(message) {
-          $("#resp").append(message);
+          $("#resp").empty().append(message);
         });
       }
     }
@@ -66,7 +66,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("thanks/Stéphanie").get().then(function(message) {
-          $("#resp").append(message);
+          $("#resp").empty().append(message);
         });
       }
     }
@@ -83,7 +83,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
       resolve: {
         respRest : function(Restangular) {
           var message = Restangular.one("everything/Stéphanie").get().then(function(message) {
-            $("#resp").append(message);
+            $("#resp").empty().append(message);
           });
         }
       }
@@ -94,7 +94,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
       resolve: {
         respRest : function(Restangular) {
           var message = Restangular.one("because/Stéphanie").get().then(function(message) {
-            $("#resp").append(message);
+            $("#resp").empty().append(message);
           });
         }
       }
@@ -105,7 +105,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
       resolve: {
         respRest : function(Restangular) {
           var message = Restangular.one("life/Stéphanie").get().then(function(message) {
-            $("#resp").append(message);
+            $("#resp").empty().append(message);
           });
         }
       }
