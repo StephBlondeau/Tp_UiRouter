@@ -1,4 +1,3 @@
-'use strict';
 _.contains = _.includes;
 
 angular.module('myApp', ['ui.router', 'restangular'])
@@ -7,13 +6,11 @@ angular.module('myApp', ['ui.router', 'restangular'])
   RestangularProvider.setBaseUrl('https://www.foaas.com/');
 
   // Initialisation du format de sortie
-  RestangularProvider.setDefaultHeaders({
-    'Content-Type'      : 'application/json',
-  });
+  RestangularProvider.setDefaultHeaders({'Content-Type' : 'application/json'});
 
   // Récupération des réponses
   RestangularProvider.setResponseExtractor(function(response, operation) {
-    return response.message + " " + response.subtitle;
+    return response.subtitle + " : " + response.message;
   });
 
   // Url par défaut
@@ -25,7 +22,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("baby/Stéphanie").get().then(function(message) {
-          $("#resp").empty().append(message);
+          $("#resp").append(message);
         });
       }
     }
@@ -36,7 +33,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("fascinating/Stéphanie").get().then(function(message) {
-          $("#resp").empty().append(message);
+          $("#resp").append(message);
         });
       }
     }
@@ -47,7 +44,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("that/Stéphanie").get().then(function(message) {
-          $("#resp").empty().append(message);
+          $("#resp").append(message);
         });
       }
     }
@@ -58,7 +55,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("what/Stéphanie").get().then(function(message) {
-          $("#resp").empty().append(message);
+          $("#resp").append(message);
         });
       }
     }
@@ -69,7 +66,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
     resolve: {
       respRest : function(Restangular) {
         var message = Restangular.one("thanks/Stéphanie").get().then(function(message) {
-          $("#resp").empty().append(message);
+          $("#resp").append(message);
         });
       }
     }
@@ -86,7 +83,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
       resolve: {
         respRest : function(Restangular) {
           var message = Restangular.one("everything/Stéphanie").get().then(function(message) {
-            $("#resp").empty().append(message);
+            $("#resp").append(message);
           });
         }
       }
@@ -97,7 +94,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
       resolve: {
         respRest : function(Restangular) {
           var message = Restangular.one("because/Stéphanie").get().then(function(message) {
-            $("#resp").empty().append(message);
+            $("#resp").append(message);
           });
         }
       }
@@ -108,7 +105,7 @@ angular.module('myApp', ['ui.router', 'restangular'])
       resolve: {
         respRest : function(Restangular) {
           var message = Restangular.one("life/Stéphanie").get().then(function(message) {
-            $("#resp").empty().append(message);
+            $("#resp").append(message);
           });
         }
       }
